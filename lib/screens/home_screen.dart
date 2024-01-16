@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/components/categories_tile.dart';
-import 'package:news_app/components/tiles_list_view.dart';
+import 'package:news_app/components/tiles_list_view_builder.dart';
 import 'package:news_app/models/category_model.dart';
 
 class HomeScreen extends StatelessWidget {
