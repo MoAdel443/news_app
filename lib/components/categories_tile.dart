@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
+import 'package:news_app/screens/category_screen.dart';
 
 class CategoriesTile extends StatelessWidget {
   const CategoriesTile({
@@ -21,28 +22,39 @@ class CategoriesTile extends StatelessWidget {
         );
       },
       itemBuilder: (context, index) {
-        return Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width: 180.0,
-              height: 100.0,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.0)),
-              child: Image.asset(
-                categories[index].image,
-                fit: BoxFit.cover,
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return CategoryScreen(category: categories[index].categoryName,);
+                },
               ),
-            ),
-            Text(
-              categories[index].categoryName,
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                  color: Colors.white),
-            ),
-          ],
+            );
+          },
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                width: 180.0,
+                height: 100.0,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(12.0)),
+                child: Image.asset(
+                  categories[index].image,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text(
+                categories[index].categoryName,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                    color: Colors.white),
+              ),
+            ],
+          ),
         );
       },
       itemCount: categories.length,

@@ -8,27 +8,28 @@ class HomeScreen extends StatelessWidget {
 
   final List<CategoryModel> categories = const [
     CategoryModel(
-        image: "assets/images/business.avif",
-        categoryName: "business"
+      image: "assets/images/business.avif",
+      categoryName: "business",
     ),
     CategoryModel(
-        image: "assets/images/entertaiment.avif",
-        categoryName: "entertainment",
-    ),
-    CategoryModel(image: "assets/images/health.avif",
-        categoryName: "health",
+      image: "assets/images/entertaiment.avif",
+      categoryName: "entertainment",
     ),
     CategoryModel(
-        image: "assets/images/technology.jpeg",
-        categoryName: "technology"
+      image: "assets/images/health.avif",
+      categoryName: "health",
     ),
     CategoryModel(
-        image: "assets/images/science.avif",
-        categoryName: "science"
+      image: "assets/images/technology.jpeg",
+      categoryName: "technology",
     ),
     CategoryModel(
-        image: "assets/images/sports.avif",
-        categoryName: "sports"
+      image: "assets/images/science.avif",
+      categoryName: "science",
+    ),
+    CategoryModel(
+      image: "assets/images/sports.avif",
+      categoryName: "sports",
     ),
   ];
 
@@ -80,4 +81,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-

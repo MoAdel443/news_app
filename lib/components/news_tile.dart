@@ -4,7 +4,7 @@ import 'package:news_app/models/article_model.dart';
 class NewsTile extends StatelessWidget {
   const NewsTile({super.key, required this.articles});
 
-  final ArticleModel articles ;
+  final ArticleModel articles;
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +13,12 @@ class NewsTile extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
           child: Image.network(
-            articles.image ?? "https://www.allianceplast.com/wp-content/uploads/no-image-1024x1024.png",
+            articles.image ??
+                "https://www.allianceplast.com/wp-content/uploads/no-image-1024x1024.png",
             fit: BoxFit.cover,
             width: double.infinity,
             height: 200.0,
           ),
-
         ),
         const SizedBox(
           height: 10.0,
